@@ -43,6 +43,7 @@ public class CadastroDeContaTest {
 				.addPackages(true, "br.com.caelum.cursoci.banco")
 				.addAsLibraries(
 						resolver.artifact("br.com.caelum:vraptor")
+								.artifact("javax.servlet:jstl")
 								.resolveAs(GenericArchive.class))
 				.as(ExplodedImporter.class)
 				.importDirectory(new File("src/main/webapp"))

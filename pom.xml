@@ -193,7 +193,7 @@
 					<skipTests>${skip.unit.tests}</skipTests>
 					<!-- Excludes integration tests when unit tests are run. -->
 					<excludes>
-						<exclude>**/IntegrationTest*.java</exclude>
+						<exclude>**/*IntegrationTest.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -219,7 +219,7 @@
 								property is true -->
 							<skipTests>${skip.integration.tests}</skipTests>
 							<includes>
-								<include>**/IntegrationTest*.java</include>
+								<include>**/*IntegrationTest.java</include>
 							</includes>
 						</configuration>
 					</execution>

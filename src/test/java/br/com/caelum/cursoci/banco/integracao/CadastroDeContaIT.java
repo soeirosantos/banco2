@@ -27,7 +27,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 @RunWith(Arquillian.class)
-public class CadastroDeContaTest {
+public class CadastroDeContaIT {
 
 	private static final String HTTP_LOCALHOST_8888 = "http://localhost:8888";
 	private WebDriver driver;
@@ -35,8 +35,9 @@ public class CadastroDeContaTest {
 	@Deployment
 	public static WebArchive createWar() {
 
-		MavenDependencyResolver resolver = DependencyResolvers.use(
-				MavenDependencyResolver.class).loadMetadataFromPom("pom.xml");
+		MavenDependencyResolver resolver = DependencyResolvers
+				.use(MavenDependencyResolver.class)
+				.loadMetadataFromPom("pom.xml");
 
 		WebArchive webArchive = ShrinkWrap
 				.create(WebArchive.class, "ROOT.war")

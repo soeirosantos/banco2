@@ -27,7 +27,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 @RunWith(Arquillian.class)
-public class CadastroDeContaIT {
+public class CadastroDeContaIntegrationTest {
 
 	private static final String HTTP_LOCALHOST_8888 = "http://localhost:8888";
 	private WebDriver driver;

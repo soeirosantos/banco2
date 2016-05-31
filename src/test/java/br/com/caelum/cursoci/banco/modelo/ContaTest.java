@@ -31,7 +31,7 @@ public class ContaTest {
 	public void testSacaEmContaSimplesComSaldoSuficiente() {
 		conta.deposita(DUZENTOS_REAIS);
 		conta.saca(CEM_REAIS);
-		assertThat(conta.getSaldo(), is(equalTo(CEM_REAIS)));
+		assertThat(conta.getSaldo(), is(equalTo(DUZENTOS_REAIS)));
 	}
 	
 	@Test(expected=RuntimeException.class)

@@ -127,7 +127,6 @@
 					<includes>
 						<include>**/*IntegrationTest*</include>
 					</includes>
-					<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 				</configuration>
 				<executions>
 					<execution>
@@ -139,12 +138,26 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 
 	<profiles>
 		<profile>
-			<id>integration</id>
+			<id>tomcat-embedded</id>
 			<dependencies>
 
 				<!-- arquillian-tomcat -->

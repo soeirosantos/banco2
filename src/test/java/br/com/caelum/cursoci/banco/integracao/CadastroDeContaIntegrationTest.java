@@ -63,6 +63,11 @@ public class CadastroDeContaIntegrationTest {
 		driver = new PhantomJSDriver(dc);
 	}
 
+	@After
+	public void desligaNavegador() {
+		driver.quit();
+	}
+	
 	@Test
 	public void contaFoiCadastrada() {
 
@@ -96,11 +101,6 @@ public class CadastroDeContaIntegrationTest {
 		driver.navigate().to(HTTP_LOCALHOST_8888 + "/conta/lista");
 		driver.findElement(By.xpath("//td[text()='" + nome + "']"));
 		driver.findElement(By.xpath("//td[text()='" + numero + "']"));
-	}
-
-	@After
-	public void desligaNavegador() {
-		driver.quit();
 	}
 
 	// auxiliar
